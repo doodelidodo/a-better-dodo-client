@@ -1,22 +1,20 @@
 import React from 'react';
-import './Diary.css';
 import image from  './macdo.jpeg'
+import {Card, Col} from "react-bootstrap";
 
 export default function Diary(props) {
     return(
-        <div className="card">
-           <div className="card-header">
-               <div className="card-day">13</div>
-               <div className="card-title">
-                   <div>Ich bin ein Diary-Titel</div>
-               </div>
-           </div>
-            <div>
-                <img className="card-img" src={image} />
-            </div>
-            <div className="card-body">
-                Das ist eine vorschau vom Text, der in einem Diary-Eintrag steht, er sollte nach einer gewissen länge abgeschnitten werden und mit 3 Punkten ergänzt werden. Somit ist es ein Teaser vom Modal, dass man aufmachen kann...
-            </div>
-        </div>
+        <Col>
+            <Card>
+                <Card.Img variant="top" src={image} />
+                <Card.Body>
+                    <Card.Title>Card title</Card.Title>
+                    <Card.Text>
+                        This is a longer card with supporting text below as a natural
+                        lead-in to additional content. This content is a little bit longer.
+                    </Card.Text>
+                </Card.Body>
+            </Card>
+        </Col>
     )
 }
